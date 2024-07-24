@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="form_title">Форма ввода данных</string>
+    <string name="enter_name">Введите имя</string>
+    <string name="enter_email">Введите email</string>
+    <string name="send">Отправить</string>
+</resources>
