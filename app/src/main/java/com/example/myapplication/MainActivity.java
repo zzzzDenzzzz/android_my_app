@@ -1,8 +1,12 @@
 package com.example.myapplication;
 
+import static com.example.myapplication.StringConst.EMPTY_STRING;
+import static com.example.myapplication.StringConst.ENTER_EMAIL;
+import static com.example.myapplication.StringConst.ENTER_NAME;
+import static com.example.myapplication.StringConst.FORM_SUBMITTED_SUCCESSFULLY;
+
 import android.os.Bundle;
 import android.text.TextUtils;
-import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -12,19 +16,14 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
-    public static final String ENTER_NAME = "Введите имя";
-    public static final String ENTER_EMAIL = "Введите email";
-    public static final String FORM_SUBMITTED_SUCCESSFULLY = "Форма успешно отправлена";
-    public static final String EMPTY_STRING = "";
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        EditText nameEditText = getView(R.id.nameEditText);
-        EditText emailEditText = getView(R.id.emailEditText);
-        Button submitButton = getView(R.id.submitButton);
+        EditText nameEditText = findViewById(R.id.nameEditText_id);
+        EditText emailEditText = findViewById(R.id.emailEditText_id);
+        Button submitButton = findViewById(R.id.submitButton_id);
 
         submitButton.setOnClickListener(view -> {
             String name = getString(nameEditText);
@@ -49,10 +48,6 @@ public class MainActivity extends AppCompatActivity {
 
     private void showToast(String message) {
         Toast.makeText(MainActivity.this, message, Toast.LENGTH_SHORT).show();
-    }
-
-    private <T extends View> T getView(int id) {
-        return findViewById(id);
     }
 
     private @NonNull String getString(EditText text) {

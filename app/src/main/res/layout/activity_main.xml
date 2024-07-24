@@ -22,7 +22,7 @@
         android:layout_marginBottom="20dp">
 
         <EditText
-            android:id="@+id/nameEditText"
+            android:id="@+id/nameEditText_id"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/enter_name"
@@ -30,7 +30,7 @@
             android:layout_marginBottom="10dp" />
 
         <EditText
-            android:id="@+id/emailEditText"
+            android:id="@+id/emailEditText_id"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/enter_email"
@@ -38,7 +38,7 @@
             android:layout_marginBottom="10dp" />
 
         <Button
-            android:id="@+id/submitButton"
+            android:id="@+id/submitButton_id"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/send" />
